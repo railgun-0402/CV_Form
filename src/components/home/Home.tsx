@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
-import './Home.scss';
+import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
+import UserTable from './UserTable';
+import UserForm from './UserForm';
 
-const Home = () => {
-    const [name, setName] = useState("");
+const Home = () => {    
   return (
-    <div className='container'>
-        <div className='name'>
-            名前を入力：
-            <input 
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            />  
-            <p>{name}</p>
-        </div>
+    <div>
+      <UserForm />
+      <UserTable />
     </div>
+
   );
 }
 
